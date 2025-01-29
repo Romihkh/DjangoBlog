@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, include, re_path
+from django.urls import path, include
 
 from account.views import Login, Register, activate
 from . import settings
@@ -23,6 +23,7 @@ from . import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', Login.as_view(), name='login'),
+    path('', include('social_django.urls', namespace='social')),
     path('register/', Register.as_view(), name='register'),
     path('activate/<uidb64>/<token>/', activate, name='activate'),
     path('', include('django.contrib.auth.urls')),
