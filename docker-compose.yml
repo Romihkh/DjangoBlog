@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    container_name: django_blog
+    command: gunicorn --bind 0.0.0.0:8080 DjangoBlog.wsgi:application
+    volumes:
+      - .:/app  # Mount the entire project directory
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    restart: always
