@@ -24,14 +24,13 @@ RUN apt-get update && apt-get install -y \
 # Copy and install dependencies
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt \
-    && pip install --no-cache-dir gunicorn
+    && pip install --no-cache-dir -r requirements.txt
 
 # Copy Django project files
 COPY . /app/
 
 # Expose the port Django runs on
-EXPOSE 8080
+EXPOSE 8000
 
 # Default command to run the application
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "DjangoBlog.wsgi:application"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
