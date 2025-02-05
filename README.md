@@ -37,7 +37,6 @@ A little about DjangoBlog:
 * Special articles and subscription
 * Signup with E-mail confirmation
 * Reset password with E-mail
-* Authentication with Google
 * Easy share on social media(Twitter, Telegram, Whats app)
 * Search bar
 * Comment system
@@ -122,13 +121,10 @@ requires special membership without it, user will see only the first 50 words of
 
 ## Author
 
-I'm Alireza a CE student and Back-end developer with special interest in Django framework and Django Rest-ful APIs.
+I'm Romina a CE student and Back-end developer with special interest in Django framework and Django Rest-ful APIs.
 
-Alireza Abavi – abavi.alireza2002@gmail.com
+Romina Hemmati – romi.hemmati.kh.02@gmail.com
 
-You can find me here at:
-[Github](https://github.com/AlirezaAbavi),
-[LinkedIn](https://www.linkedin.com/in/alireza-abavi/)
 
 ## Credits
 
@@ -144,4 +140,4 @@ Thank you to the following awesome geeks for their templates and packages ❤️
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
-MIT © AlirezaAbavi
+MIT © Romina Hemmati

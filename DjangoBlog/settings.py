@@ -104,12 +104,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Location for collected static files (for production)
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Additional static files locations (for development)
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 # Media settings (for user uploads)
 MEDIA_URL = '/media/'
@@ -120,6 +120,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email Configuration
 EMAIL_BACKEND = config('EMAIL_BACKEND', default='django.core.mail.backends.console.EmailBackend')
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='your-default-secret-key')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='your-default-secret-key')
+
 
 # Authentication backends
 AUTHENTICATION_BACKENDS = (
